@@ -12,9 +12,12 @@ while True:
 
    if number == "Q" : # Q입력시 while문 종료
        break
-   elif number >= "1"   : 
+   elif number >= "1"  : 
     fruit_print_format = "{}: {}" #출력형태 1 : "apple"
     count = int(number) # int형으로 바꿔줌 
-    for index, fruit in enumerate(fruits[:count], 1):  #과일 리스트 처음부터 ~ count 까지만 가져오기, index시작값은 1  
-        print(fruit_print_format.format(index, fruit))
+    if count > len(fruits) : #리스트 길이보다 큰 수 입력 시 
+       print("숫자를 다시 입력하세요")
+    else :
+        for index, fruit in enumerate(fruits[:count], 1):  #과일 리스트 처음부터 ~ count 까지만 가져오기, index시작값은 1  
+         print(fruit_print_format.format(index, fruit))
 
