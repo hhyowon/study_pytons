@@ -34,7 +34,7 @@ for key, value in thisdict.items():
 pass
 
 # add item in dict
-
-
-
+thisdict['color'] = 'Red'
 # remove item in dict
+del thisdict['year']
+del thisdict
